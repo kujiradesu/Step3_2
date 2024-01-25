@@ -1,12 +1,15 @@
 import streamlit as st
 import pandas as pd
 import sqlite3
+import os
 import folium
 from streamlit_folium import folium_static
 
 # データベースからデータを読み込む関数
 def load_data():
-    conn = sqlite3.connect('fudosan2.db')
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    db_path = os.path.join(current_dir, 'fudosan2.db')
+    conn = sqlite3.connect(db_path)
     df = pd.read_sql("SELECT * FROM property_data", conn)
     df['Rent'] = pd.to_numeric(df['Rent'], errors='coerce')
     df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
