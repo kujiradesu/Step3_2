@@ -2,3 +2,4 @@ pandas
 streamlit
 gmaps
 python-dotenv
+folium
