@@ -3,3 +3,4 @@ streamlit
 gmaps
 python-dotenv
 folium
+streamlit_folium
