@@ -70,7 +70,6 @@ def main():
         num_hits = len(filtered_df)
 
         # ヒット件数の表示
-        st.title("おすすめ物件")
         st.markdown(f"<h1 style='text-align: center; color: white; font-size: 48px;'>{num_hits}</h1>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: center; color: white; font-size: 24px;'>件がヒットしました！</p>", unsafe_allow_html=True)
 
